@@ -66,6 +66,10 @@ gwt {
 4. In order to run `desktop` I had to remove standard Application configuration in IntelliJ and add Gradle 
 configuration:
 
+![image](https://cloud.githubusercontent.com/assets/3080318/11165494/b6af7908-8b19-11e5-968b-652e0bd22569.png)
+
+This is needed in order for IntelliJ to generate dagger sources on running `desktop`. On the very first run it 
+feels very slow, but once gradle daemon warms up it makes little to no difference with traditional Application launcher configuration. It also supports hot swap.
 
 That's pretty much it. I have tested this configuration on desktop, ios, android, html (both superDev and dist).
 If you're aware of a better way of incorporating dagger 2, let me know.
