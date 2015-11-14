@@ -5,10 +5,8 @@ This is a modified stock libGDX project that uses Dagger 2.
 ## Things that has been modified comparing to stock libGDX project:
 
 1. Dagger 2 dependency has been introduced in `build.gradle`:
-
- a. `apt` plugin has been added to build classpath - this is needed to be able to avoid including `dagger-compiler` 
+  * `apt` plugin has been added to build classpath - this is needed to be able to avoid including `dagger-compiler` 
  dependency as `compile`, thus, packaging `dagger-compiler` into the game.
-
 ```
   buildscript {
     ...
@@ -18,8 +16,7 @@ This is a modified stock libGDX project that uses Dagger 2.
     }
 }
 ```
- 
- b. Declaring dagger2 dependencies for `core` subproject:
+  * Declaring dagger2 dependencies for `core` subproject:
  
  ```
 ext {
@@ -38,7 +35,6 @@ ext {
     }
 }
 ```
- 
 2. dagger GWT module has been added into `html/src/dagger/Dagger.gwt.xml`. Also, in order for GWT to work, sources for dagger 
 core and `javax.inject` packages has been re-packaged under `html/src/dagger/emu` directory and declared 
 in the GWT module:
